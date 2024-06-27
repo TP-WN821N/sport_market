@@ -1,0 +1,94 @@
+.poleznoe_page {
+  position: relative;
+  padding-bottom: 0;
+  padding-top: 20px;
+
+  .url {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .glawni {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      span {
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0.6;
+      }
+
+      i {
+        width: 16px;
+        height: 16px;
+        color: #000;
+        opacity: 1;
+      }
+    }
+
+    .centr {
+      color: #1F1D14;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .poleznoe_box {
+    display: flex;
+    flex-direction: column;
+
+    .poleznoe_desc {
+      .sana {
+        padding-top: 40px;
+      }
+    }
+  }
+
+  .pokazat_wrap {
+    padding-top: 25px;
+
+    .pokazat {
+      color: #000;
+      font-size: 20px;
+      font-weight: 400;
+      padding: 15px 40px;
+      border-radius: 5px;
+      border: 2px solid #FBD029;
+      width: fit-content;
+    }
+  }
+}
+
+.aksiya_padding {
+  padding-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+  .poleznoe_page {
+    .poleznoe_box {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 15px 2%;
+
+      .poleznoe_desc {
+        width: 49%;
+        padding-bottom: 100px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .poleznoe_page {
+    .poleznoe_box {
+      gap: 15px 2%;
+
+      .poleznoe_desc {
+        width: 49%;
+        padding-bottom: 150px;
+      }
+    }
+  }
+}

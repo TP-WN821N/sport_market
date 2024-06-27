@@ -1,0 +1,258 @@
+.header {
+  background-color: #1F1D14;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+  .header_nav {
+    display: flex;
+    justify-content: space-between;
+
+    .header_left {
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+  }
+
+  .header_logo {
+    gap: 11px;
+
+    h1 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 28px;
+    }
+  }
+
+  .header_list {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: start;
+    top: 100px;
+    right: -100%;
+    gap: 5px;
+    padding-bottom: 5px;
+    background-color: blue;
+    padding: 10px 20px 10px 5px;
+    border-radius: 5px;
+    z-index: 11;
+
+    a {
+      padding: 10px;
+      opacity: 0.8;
+      font-size: 16px;
+      font-weight: 400;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .header_list_toggle {
+    right: 20px;
+  }
+
+  .header_right {
+    gap: 30px;
+    display: flex;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      img {
+        width: 24px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  i {
+    font-size: 24px;
+  }
+
+  * {
+    color: #fff;
+  }
+}
+
+.header_bottom {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  padding-top: 90px;
+
+  .headerB_nav {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .headerB_left {
+    gap: 4%;
+
+    .headerB_katalog {
+      background-color: #1F1D14;
+      font-size: 20px;
+      font-weight: 400;
+      border: none;
+      padding: 15px 30px;
+      width: 48%;
+      align-items: center;
+      color: #fff;
+      border-radius: 5px;
+      gap: 10px;
+      line-height: 24px;
+    }
+
+    .headerB_search {
+      width: 48%;
+
+    }
+
+    .headerB_search input {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 15px 40px 15px 20px;
+      line-height: 19px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f2f2f2;
+      outline: none;
+
+      &::placeholder {
+        color: #1F1D14;
+      }
+    }
+
+  }
+
+  .headerB_right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+
+    .headerBr_user {
+      padding: 13px 12px 12px 13px;
+      background-color: #f2f2f2;
+      border-radius: 3px;
+
+      img {
+        display: block;
+      }
+    }
+
+    .headerBr_like {
+      padding: 13px 12px 12px 13px;
+      background-color: #f2f2f2;
+      border-radius: 3px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 14px;
+        height: 14px;
+        background-color: red;
+        position: absolute;
+        border-radius: 50%;
+        top: -5px;
+        right: -5px;
+      }
+
+      img {
+        display: block;
+      }
+    }
+
+    .header_korzina {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: #f2f2f2;
+      border: none;
+      padding: 15px 30px;
+      color: #1F1D14;
+      font-size: 20px;
+      font-weight: 400;
+      border-radius: 3px;
+      margin-left: 25px;
+    }
+  }
+
+  .headerB_search img {
+    position: relative;
+    right: 20px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 600px) {
+  .header {
+    .header_right {
+      a {
+        img {
+          width: 18px;
+        }
+
+        span {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header_bottom {
+    .headerB_nav {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    .header_list {
+      display: flex;
+      gap: 0;
+      position: static;
+      background-color: transparent;
+      flex-direction: row;
+      gap: 0px;
+    }
+
+    .header_right {
+      gap: 15px;
+    }
+
+    i {
+      display: none;
+    }
+  }
+}
+
+// @media (min-width: 1211px) {
+//   .header {
+//     .header_list {
+//       gap: 10px;
+//     }
+
+//     .header_right {
+//       gap: 30px;
+//     }
+
+//   }
+// }
